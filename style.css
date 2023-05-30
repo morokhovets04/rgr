@@ -1,78 +1,152 @@
-ul.menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #f8f8f8;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-
-  ul.menu li {
-    float: left;
-  }
-
-  ul.menu li a {
-    display: block;
-    color: #333;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-
-  ul.menu li a:hover {
-    background-color: #ddd;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-    /* Стилизація слайдера */
-.slider-container {
-  position: relative;
-  width: 1400px;
-  height: 900px;
-  overflow: hidden;
+body {
+  color: #2b2727;
+  line-height: 1.5;
+  font-size: 1rem;
+  overflow-x: hidden;
 }
 
-.slider-images {
+.header {
   display: flex;
-  width: 300%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 7px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background: radial-gradient(rgb(204, 204, 7), rgb(148, 235, 48));
+}
+.logo{
+  width: 140px;
+  height: 100px;
 }
 
-.slider-image {
-  width: 100%;
-  height: auto;
+.menu {
+  list-style-type: none;
+  padding: 0;
 }
 
-.slider-prev,
-.slider-next {
+.menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.menu li a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  background-color: DarkSlateGrey;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.menu li a:before {
+  content: "";
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 24px;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: width 0.3s;
+  border-radius: 50px;
+}
+
+.menu li a:hover {
+  color: #333;
+}
+
+.menu li a:hover:before {
+  width: 100%;
+}
+.slider {
+  position: relative;
+}
+
+.slider-container {
+  display: flex;
+  overflow: hidden;
+  width: 300%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-container img {
+  flex-shrink: 0;
+  width: 33.33%;
+  height: 500px;
+  object-fit: cover;
+  border: 10px solid #ccc;
+  border-radius: 7%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
   padding: 10px;
+}
+
+.slider-arrow {
+  
   cursor: pointer;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #252323;
+  color: #dad5d5;
+  margin: 0 5px;
+}
+.footer-wrap{
+  padding: 10px 10px;
+  background: #585757;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+}
+.under{
+  padding: 50px 20px;
+}
+.name{
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-bottom: 80px;
+}
+.under{
+  padding: 50px 0;
 }
 
-.slider-prev {
-  left: 10px;
+.block-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.block-img{
+  width: 47%;
+  
+  text-align: center;
+}
+.block-text{
+  width: 50%;
 }
 
-.slider-next {
-  right: 10px;
+.block-text {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+  padding: 50px;
 }
-
-        /* Стили для футера */
-footer {
-            background-color: #f1f1f1;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        /* Дополнительные стили для ссылок в футере */
-footer a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 10px;
-        }
